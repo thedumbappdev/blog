@@ -1,0 +1,46 @@
+<div class="field is-horizontal">
+    <div class="field-label is-normal">
+        <label for="title" class="label has-text-weight-normal is-size-5">Title</label>
+    </div>
+    <div class="field-body">
+        <div class="field">
+        <p class="control">
+            <input type="text" name="title" id="title" value="<%= article.title %>" class="input" required>
+        </p>
+        </div>
+    </div>
+</div>
+
+<div class="field is-horizontal">
+    <div class="field-label is-normal">
+        <label for="description" class="label has-text-weight-normal is-size-5">Description</label>    
+    </div>
+    <div class="field-body">
+        <div class="field">
+            <div class="control">
+                <textarea class="textarea" name="description" id="description"><%= article.description %></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="field is-horizontal">
+    <div class="field-label is-normal">
+        <label for="markdown" class="label has-text-weight-normal is-size-5">Markdown</label>    
+    </div>
+    <div class="field-body">
+        <div class="field">
+            <div class="control">
+                <textarea class="textarea" name="markdown" id="markdown" required><%= article.markdown %></textarea>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="field is-horizontal pt-5">
+    <div class="field-label is-normal"></div>
+    <div class="field-body">
+        <a href="/" class="button is-uppercase is-medium mr-2">Cancel</a>
+        <button type="submit" class="button has-background-info-dark has-text-white-bis has-text-weight-medium is-uppercase is-medium px-6 ml-2">Save</button>
+    </div>
+</div>

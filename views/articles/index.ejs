@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Blog</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <section class="section">
+        <div class="container">
+            <h1 class="is-size-2 is-uppercase has-text-weight-normal mb-4">Blog Articles</h1>
+
+            <a href="/articles/new" class="button has-background-info-dark has-text-white-bis has-text-weight-medium is-medium">New Article</a>
+
+            <% articles.forEach(article => { %>
+                <div class="card mt-4 p-5">
+                    <div class="card-body">
+                        <h3 class="card-title has-text-weight-medium is-size-4 pb-2"><%= article.title %></h3>
+                        <div class="card-subtitle has-text-grey-light pb-4">
+                            <%= article.createdAt.toLocaleDateString() %> 
+                        </div>
+                        <div class="content pb-2">
+                            <%= article.description %>
+                        </div>
+                        <div class="buttons">
+                            <a href="articles/<%= article.slug %>" class="button is-primary">Read More</a>
+                            <a href="articles/edit/<%= article.id %>/" class="button is-info">Edit</a>
+                            <form action="/articles/<%= article.id %>?_method=DELETE" method="POST">
+                                <button type="submit" class="button is-danger">Delete</button>
+                            </form>
+                        </div>
+                    </div> 
+                </div>
+            <% }) %> 
+        </div>
+    </section>
+</body>
+</html>

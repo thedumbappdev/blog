@@ -1,0 +1,25 @@
+{
+  "name": "myBlog",
+  "version": "1.0.0",
+  "description": "Markdown Blog with MERN Stack",
+  "author": "Dip Kumar Kapat (kapat.dip@gmail.com)",
+  "license": "MIT",
+  "main": "server.js",
+  "scripts": {
+    "devStart": "nodemon server.js"
+  },
+  "dependencies": {
+    "@material-ui/core": "^4.11.0",
+    "dompurify": "^2.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "jsdom": "^16.4.0",
+    "marked": "^1.2.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.10.9",
+    "slugify": "^1.4.5"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
